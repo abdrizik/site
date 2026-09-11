@@ -1,0 +1,30 @@
+:root {
+  --space-0: calc(var(--spacing) * 0);
+  --space-050: calc(var(--spacing) * 0.5);
+  --space-100: calc(var(--spacing) * 1);
+  --space-150: calc(var(--spacing) * 1.5);
+  --space-200: calc(var(--spacing) * 2);
+  --space-300: calc(var(--spacing) * 3);
+  --space-400: calc(var(--spacing) * 4);
+  --space-600: calc(var(--spacing) * 6);
+  --space-800: calc(var(--spacing) * 8);
+  --space-1200: calc(var(--spacing) * 12);
+  --space-1600: calc(var(--spacing) * 16);
+  --space-2400: calc(var(--spacing) * 24);
+  --space-4000: calc(var(--spacing) * 40);
+  --space-negative-100: calc(var(--spacing) * -1);
+  --space-negative-200: calc(var(--spacing) * -2);
+  --space-negative-300: calc(var(--spacing) * -3);
+  --space-negative-400: calc(var(--spacing) * -4);
+  --space-negative-600: calc(var(--spacing) * -6);
+
+  --radius-100: var(--radius-sm);
+  --radius-200: var(--radius-lg);
+  --radius-400: var(--radius-2xl);
+  --radius-full: calc(infinity * 1px);
+
+  --stroke-border: 1px;
+  --stroke-border-thick: 2px;
+  --stroke-focus: 2px;
+  --stroke-focus-offset: 2px;
+}

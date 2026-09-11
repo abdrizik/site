@@ -1,0 +1,328 @@
+:root {
+  --alpha-100: 2.5%;
+  --alpha-200: 5%;
+  --alpha-300: 10%;
+  --alpha-400: 15%;
+  --alpha-500: 20%;
+  --alpha-600: 25%;
+  --alpha-700: 30%;
+  --alpha-800: 50%;
+  --alpha-900: 75%;
+  --alpha-1000: 90%;
+
+  --color-bg-base: light-dark(#fff, var(--color-neutral-900));
+  --color-bg-base-hover: light-dark(
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-100), #fff),
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-900))
+  );
+  --color-bg-base-secondary: light-dark(var(--color-neutral-50), var(--color-neutral-950));
+  --color-bg-base-secondary-hover: light-dark(
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-200), var(--color-neutral-50)),
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-950))
+  );
+  --color-bg-base-tertiary: light-dark(var(--color-neutral-100), var(--color-neutral-800));
+  --color-bg-base-tertiary-hover: light-dark(
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-200), var(--color-neutral-100)),
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-800))
+  );
+  --color-bg-disabled: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-200), transparent),
+    color-mix(in oklab, #fff var(--alpha-100), transparent)
+  );
+  --color-bg-brand: light-dark(var(--color-emerald-600), var(--color-emerald-600));
+  --color-bg-brand-hover: light-dark(
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-emerald-600)),
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-emerald-600))
+  );
+  --color-bg-brand-secondary: light-dark(
+    var(--color-emerald-100),
+    color-mix(in oklab, var(--color-emerald-500) var(--alpha-400), transparent)
+  );
+  --color-bg-brand-secondary-hover: light-dark(
+    var(--color-emerald-200),
+    color-mix(in oklab, var(--color-emerald-500) var(--alpha-500), transparent)
+  );
+  --color-bg-brand-tertiary: light-dark(
+    var(--color-emerald-50),
+    color-mix(in oklab, var(--color-emerald-500) var(--alpha-300), transparent)
+  );
+  --color-bg-brand-tertiary-hover: light-dark(
+    var(--color-emerald-100),
+    color-mix(in oklab, var(--color-emerald-500) var(--alpha-400), transparent)
+  );
+  --color-bg-neutral: light-dark(var(--color-neutral-900), var(--color-neutral-100));
+  --color-bg-neutral-hover: light-dark(
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-900)),
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-200), var(--color-neutral-100))
+  );
+  --color-bg-neutral-secondary: light-dark(
+    var(--color-neutral-100),
+    color-mix(in oklab, #fff var(--alpha-300), transparent)
+  );
+  --color-bg-neutral-secondary-hover: light-dark(
+    var(--color-neutral-200),
+    color-mix(in oklab, #fff var(--alpha-400), transparent)
+  );
+  --color-bg-neutral-tertiary: light-dark(
+    var(--color-neutral-50),
+    color-mix(in oklab, #fff var(--alpha-200), transparent)
+  );
+  --color-bg-neutral-tertiary-hover: light-dark(
+    var(--color-neutral-100),
+    color-mix(in oklab, #fff var(--alpha-300), transparent)
+  );
+  --color-bg-info: light-dark(var(--color-blue-600), var(--color-blue-500));
+  --color-bg-info-hover: light-dark(
+    color-mix(in srgb, #fff var(--alpha-300), var(--color-blue-600)),
+    color-mix(in srgb, #fff var(--alpha-300), var(--color-blue-500))
+  );
+  --color-bg-info-secondary: light-dark(
+    var(--color-blue-100),
+    color-mix(in oklab, var(--color-blue-500) var(--alpha-400), transparent)
+  );
+  --color-bg-info-secondary-hover: light-dark(
+    var(--color-blue-200),
+    color-mix(in oklab, var(--color-blue-500) var(--alpha-500), transparent)
+  );
+  --color-bg-info-tertiary: light-dark(
+    var(--color-blue-50),
+    color-mix(in oklab, var(--color-blue-500) var(--alpha-300), transparent)
+  );
+  --color-bg-info-tertiary-hover: light-dark(
+    var(--color-blue-100),
+    color-mix(in oklab, var(--color-blue-500) var(--alpha-400), transparent)
+  );
+  --color-bg-success: light-dark(var(--color-green-700), var(--color-green-600));
+  --color-bg-success-hover: light-dark(
+    color-mix(in srgb, #fff var(--alpha-300), var(--color-green-700)),
+    color-mix(in srgb, #fff var(--alpha-300), var(--color-green-600))
+  );
+  --color-bg-success-secondary: light-dark(
+    var(--color-green-100),
+    color-mix(in oklab, var(--color-green-500) var(--alpha-400), transparent)
+  );
+  --color-bg-success-secondary-hover: light-dark(
+    var(--color-green-200),
+    color-mix(in oklab, var(--color-green-500) var(--alpha-500), transparent)
+  );
+  --color-bg-success-tertiary: light-dark(
+    var(--color-green-50),
+    color-mix(in oklab, var(--color-green-500) var(--alpha-300), transparent)
+  );
+  --color-bg-success-tertiary-hover: light-dark(
+    var(--color-green-100),
+    color-mix(in oklab, var(--color-green-500) var(--alpha-400), transparent)
+  );
+  --color-bg-warning: light-dark(var(--color-amber-400), var(--color-amber-400));
+  --color-bg-warning-hover: light-dark(
+    color-mix(in srgb, #fff var(--alpha-600), var(--color-amber-400)),
+    color-mix(in srgb, #fff var(--alpha-600), var(--color-amber-400))
+  );
+  --color-bg-warning-secondary: light-dark(
+    var(--color-amber-100),
+    color-mix(in oklab, var(--color-amber-400) var(--alpha-400), transparent)
+  );
+  --color-bg-warning-secondary-hover: light-dark(
+    var(--color-amber-200),
+    color-mix(in oklab, var(--color-amber-400) var(--alpha-500), transparent)
+  );
+  --color-bg-warning-tertiary: light-dark(
+    var(--color-amber-50),
+    color-mix(in oklab, var(--color-amber-400) var(--alpha-300), transparent)
+  );
+  --color-bg-warning-tertiary-hover: light-dark(
+    var(--color-amber-100),
+    color-mix(in oklab, var(--color-amber-400) var(--alpha-400), transparent)
+  );
+  --color-bg-danger: light-dark(var(--color-red-600), var(--color-red-500));
+  --color-bg-danger-hover: light-dark(
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-red-600)),
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-red-500))
+  );
+  --color-bg-danger-secondary: light-dark(
+    var(--color-red-100),
+    color-mix(in oklab, var(--color-red-500) var(--alpha-400), transparent)
+  );
+  --color-bg-danger-secondary-hover: light-dark(
+    var(--color-red-200),
+    color-mix(in oklab, var(--color-red-500) var(--alpha-500), transparent)
+  );
+  --color-bg-danger-tertiary: light-dark(
+    var(--color-red-50),
+    color-mix(in oklab, var(--color-red-500) var(--alpha-300), transparent)
+  );
+  --color-bg-danger-tertiary-hover: light-dark(
+    var(--color-red-100),
+    color-mix(in oklab, var(--color-red-500) var(--alpha-400), transparent)
+  );
+  --color-bg-measurement: light-dark(
+    var(--color-fuchsia-100),
+    color-mix(in oklab, var(--color-fuchsia-400) var(--alpha-700), transparent)
+  );
+  --color-bg-scrim: light-dark(
+    color-mix(in oklab, #fff var(--alpha-1000), transparent),
+    color-mix(in oklab, #000 var(--alpha-1000), transparent)
+  );
+  --color-bg-blanket: light-dark(
+    color-mix(in oklab, #000 var(--alpha-900), transparent),
+    color-mix(in oklab, #000 var(--alpha-900), transparent)
+  );
+  --color-bg-overlay: light-dark(
+    color-mix(in oklab, #000 var(--alpha-800), transparent),
+    color-mix(in oklab, #000 var(--alpha-800), transparent)
+  );
+  --color-text-base: light-dark(var(--color-neutral-950), #fff);
+  --color-text-base-secondary: light-dark(var(--color-neutral-500), var(--color-neutral-400));
+  --color-text-base-tertiary: light-dark(var(--color-neutral-400), var(--color-neutral-400));
+  --color-text-disabled: light-dark(var(--color-neutral-400), var(--color-neutral-400));
+  --color-text-brand: light-dark(var(--color-emerald-800), var(--color-emerald-300));
+  --color-text-brand-secondary: light-dark(var(--color-emerald-700), var(--color-emerald-400));
+  --color-text-brand-tertiary: light-dark(var(--color-emerald-600), var(--color-emerald-500));
+  --color-text-on-brand: light-dark(#fff, #fff);
+  --color-text-on-brand-secondary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
+  --color-text-on-brand-tertiary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
+  --color-text-neutral: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-text-neutral-secondary: light-dark(var(--color-neutral-600), var(--color-neutral-400));
+  --color-text-neutral-tertiary: light-dark(var(--color-neutral-500), var(--color-neutral-500));
+  --color-text-on-neutral: light-dark(#fff, var(--color-neutral-950));
+  --color-text-on-neutral-secondary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-text-on-neutral-tertiary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-text-info: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-text-info-secondary: light-dark(var(--color-blue-600), var(--color-blue-400));
+  --color-text-info-tertiary: light-dark(var(--color-blue-500), var(--color-blue-500));
+  --color-text-on-info: light-dark(#fff, #fff);
+  --color-text-on-info-secondary: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-text-on-info-tertiary: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-text-success: light-dark(var(--color-green-800), var(--color-green-300));
+  --color-text-success-secondary: light-dark(var(--color-green-700), var(--color-green-400));
+  --color-text-success-tertiary: light-dark(var(--color-green-600), var(--color-green-500));
+  --color-text-on-success: light-dark(#fff, #fff);
+  --color-text-on-success-secondary: light-dark(var(--color-green-800), var(--color-green-300));
+  --color-text-on-success-tertiary: light-dark(var(--color-green-800), var(--color-green-300));
+  --color-text-warning: light-dark(var(--color-amber-800), var(--color-amber-300));
+  --color-text-warning-secondary: light-dark(var(--color-amber-700), var(--color-amber-400));
+  --color-text-warning-tertiary: light-dark(var(--color-amber-600), var(--color-amber-500));
+  --color-text-on-warning: light-dark(var(--color-amber-950), var(--color-amber-950));
+  --color-text-on-warning-secondary: light-dark(var(--color-amber-800), var(--color-amber-300));
+  --color-text-on-warning-tertiary: light-dark(var(--color-amber-800), var(--color-amber-300));
+  --color-text-danger: light-dark(var(--color-red-700), var(--color-red-300));
+  --color-text-danger-secondary: light-dark(var(--color-red-600), var(--color-red-400));
+  --color-text-danger-tertiary: light-dark(var(--color-red-500), var(--color-red-500));
+  --color-text-on-danger: light-dark(#fff, #fff);
+  --color-text-on-danger-secondary: light-dark(var(--color-red-800), var(--color-red-300));
+  --color-text-on-danger-tertiary: light-dark(var(--color-red-700), var(--color-red-300));
+  --color-icon-base: light-dark(var(--color-neutral-950), #fff);
+  --color-icon-base-secondary: light-dark(var(--color-neutral-500), var(--color-neutral-400));
+  --color-icon-base-tertiary: light-dark(var(--color-neutral-400), var(--color-neutral-400));
+  --color-icon-disabled: light-dark(var(--color-neutral-400), var(--color-neutral-400));
+  --color-icon-brand: light-dark(var(--color-emerald-800), var(--color-emerald-300));
+  --color-icon-brand-secondary: light-dark(var(--color-emerald-700), var(--color-emerald-400));
+  --color-icon-brand-tertiary: light-dark(var(--color-emerald-600), var(--color-emerald-500));
+  --color-icon-on-brand: light-dark(#fff, #fff);
+  --color-icon-on-brand-secondary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
+  --color-icon-on-brand-tertiary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
+  --color-icon-neutral: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-icon-neutral-secondary: light-dark(var(--color-neutral-600), var(--color-neutral-400));
+  --color-icon-neutral-tertiary: light-dark(var(--color-neutral-500), var(--color-neutral-500));
+  --color-icon-on-neutral: light-dark(#fff, var(--color-neutral-950));
+  --color-icon-on-neutral-secondary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-icon-on-neutral-tertiary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-icon-info: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-icon-info-secondary: light-dark(var(--color-blue-600), var(--color-blue-400));
+  --color-icon-info-tertiary: light-dark(var(--color-blue-500), var(--color-blue-500));
+  --color-icon-on-info: light-dark(#fff, #fff);
+  --color-icon-on-info-secondary: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-icon-on-info-tertiary: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-icon-success: light-dark(var(--color-green-800), var(--color-green-300));
+  --color-icon-success-secondary: light-dark(var(--color-green-700), var(--color-green-400));
+  --color-icon-success-tertiary: light-dark(var(--color-green-600), var(--color-green-500));
+  --color-icon-on-success: light-dark(#fff, #fff);
+  --color-icon-on-success-secondary: light-dark(var(--color-green-800), var(--color-green-300));
+  --color-icon-on-success-tertiary: light-dark(var(--color-green-800), var(--color-green-300));
+  --color-icon-warning: light-dark(var(--color-amber-800), var(--color-amber-300));
+  --color-icon-warning-secondary: light-dark(var(--color-amber-700), var(--color-amber-400));
+  --color-icon-warning-tertiary: light-dark(var(--color-amber-600), var(--color-amber-500));
+  --color-icon-on-warning: light-dark(var(--color-amber-950), var(--color-amber-950));
+  --color-icon-on-warning-secondary: light-dark(var(--color-amber-800), var(--color-amber-300));
+  --color-icon-on-warning-tertiary: light-dark(var(--color-amber-800), var(--color-amber-300));
+  --color-icon-danger: light-dark(var(--color-red-700), var(--color-red-300));
+  --color-icon-danger-secondary: light-dark(var(--color-red-600), var(--color-red-400));
+  --color-icon-danger-tertiary: light-dark(var(--color-red-500), var(--color-red-500));
+  --color-icon-on-danger: light-dark(#fff, #fff);
+  --color-icon-on-danger-secondary: light-dark(var(--color-red-800), var(--color-red-300));
+  --color-icon-on-danger-tertiary: light-dark(var(--color-red-700), var(--color-red-300));
+  --color-border-base: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-400), transparent),
+    color-mix(in oklab, #fff var(--alpha-400), transparent)
+  );
+  --color-border-base-secondary: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-300), transparent),
+    color-mix(in oklab, #fff var(--alpha-300), transparent)
+  );
+  --color-border-base-tertiary: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-200), transparent),
+    color-mix(in oklab, #fff var(--alpha-200), transparent)
+  );
+  --color-border-disabled: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-300), transparent),
+    color-mix(in oklab, #fff var(--alpha-300), transparent)
+  );
+  --color-border-brand: light-dark(
+    color-mix(in oklab, var(--color-emerald-600) var(--alpha-1000), transparent),
+    var(--color-emerald-300)
+  );
+  --color-border-brand-secondary: light-dark(var(--color-emerald-500), var(--color-emerald-500));
+  --color-border-brand-tertiary: light-dark(
+    color-mix(in oklab, var(--color-emerald-600) var(--alpha-500), transparent),
+    color-mix(in oklab, var(--color-emerald-400) var(--alpha-500), transparent)
+  );
+  --color-border-neutral: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-1000), transparent),
+    var(--color-neutral-400)
+  );
+  --color-border-neutral-secondary: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-300), transparent),
+    color-mix(in oklab, #fff var(--alpha-400), transparent)
+  );
+  --color-border-neutral-tertiary: light-dark(
+    color-mix(in oklab, var(--color-neutral-600) var(--alpha-500), transparent),
+    color-mix(in oklab, #fff var(--alpha-300), transparent)
+  );
+  --color-border-info: light-dark(
+    color-mix(in oklab, var(--color-blue-700) var(--alpha-1000), transparent),
+    var(--color-blue-300)
+  );
+  --color-border-info-secondary: light-dark(var(--color-blue-500), var(--color-blue-500));
+  --color-border-info-tertiary: light-dark(
+    color-mix(in oklab, var(--color-blue-600) var(--alpha-500), transparent),
+    color-mix(in oklab, var(--color-blue-400) var(--alpha-500), transparent)
+  );
+  --color-border-success: light-dark(
+    color-mix(in oklab, var(--color-green-800) var(--alpha-1000), transparent),
+    var(--color-green-300)
+  );
+  --color-border-success-secondary: light-dark(var(--color-green-500), var(--color-green-500));
+  --color-border-success-tertiary: light-dark(
+    color-mix(in oklab, var(--color-green-600) var(--alpha-500), transparent),
+    color-mix(in oklab, var(--color-green-400) var(--alpha-500), transparent)
+  );
+  --color-border-warning: light-dark(
+    color-mix(in oklab, var(--color-amber-500) var(--alpha-1000), transparent),
+    var(--color-amber-700)
+  );
+  --color-border-warning-secondary: light-dark(var(--color-amber-500), var(--color-amber-500));
+  --color-border-warning-tertiary: light-dark(
+    color-mix(in oklab, var(--color-amber-600) var(--alpha-500), transparent),
+    color-mix(in oklab, var(--color-amber-400) var(--alpha-500), transparent)
+  );
+  --color-border-danger: light-dark(
+    color-mix(in oklab, var(--color-red-700) var(--alpha-1000), transparent),
+    var(--color-red-300)
+  );
+  --color-border-danger-secondary: light-dark(var(--color-red-500), var(--color-red-500));
+  --color-border-danger-tertiary: light-dark(
+    color-mix(in oklab, var(--color-red-600) var(--alpha-500), transparent),
+    color-mix(in oklab, var(--color-red-400) var(--alpha-500), transparent)
+  );
+  --color-border-focus: light-dark(var(--color-blue-500), var(--color-blue-500));
+}

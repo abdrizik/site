@@ -1,0 +1,321 @@
+.prose {
+  --prose-flow: calc(var(--spacing) * 4);
+  --prose-muted: var(--color-text-neutral-secondary);
+  --prose-rule: var(--color-border-base-secondary);
+  --prose-foreground: var(--color-text-base);
+
+  isolation: isolate;
+  margin-trim: block-start;
+
+  *:not(:where(.not-prose, .not-prose *)) {
+    &:where(p) {
+      margin-block-start: var(--prose-flow);
+    }
+
+    &:where(h1, h2, h3, h4, h5, h6) {
+      position: relative;
+      color: var(--prose-foreground);
+      font-weight: var(--font-weight-medium);
+      text-wrap: balance;
+    }
+
+    &:where(h1) {
+      margin-block-start: var(--prose-flow);
+      font-size: var(--text-2xl);
+      line-height: 1.2;
+    }
+
+    &:where(h2) {
+      margin-block-start: calc(var(--prose-flow) * 3);
+      font-size: var(--text-xl);
+      line-height: var(--leading-tight);
+    }
+
+    &:where(h3) {
+      margin-block-start: calc(var(--prose-flow) * 2);
+      font-size: var(--text-lg);
+      line-height: 1.4;
+    }
+
+    &:where(h4, h5, h6) {
+      margin-block-start: calc(var(--prose-flow) * 2);
+      font-size: var(--text-base);
+    }
+
+    &:where(h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + *) {
+      margin-block-start: var(--prose-flow);
+    }
+
+    &:where(a) {
+      color: var(--prose-foreground);
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: color-mix(in oklab, currentColor 40%, transparent);
+      text-decoration-skip-ink: auto;
+      text-underline-offset: 0.16em;
+      transition: text-decoration-color 150ms ease;
+    }
+
+    &:where(:is(h1, h2, h3, h4, h5, h6) a) {
+      font-weight: inherit;
+      text-decoration: none;
+    }
+
+    &:where(:is(h2, h3, h4, h5, h6) .anchor) {
+      position: absolute;
+      inset-inline-end: 100%;
+      padding-inline-end: calc(var(--spacing) * 3.5);
+      color: var(--color-text-neutral-tertiary);
+      font-family: var(--font-serif);
+      opacity: 0;
+      transition:
+        opacity 150ms ease,
+        color 150ms ease;
+    }
+
+    &:where(:is(h2, h3, h4, h5, h6):hover .anchor),
+    &:where(.anchor:focus-visible) {
+      opacity: 1;
+    }
+
+    &:where(.anchor:hover) {
+      color: var(--color-text-neutral-secondary);
+    }
+
+    &:where(strong) {
+      color: var(--prose-foreground);
+      font-weight: var(--font-weight-medium);
+    }
+
+    &:where(em) {
+      font-family: var(--font-serif);
+      font-size: 1.06em;
+    }
+
+    &:where(mark) {
+      background-color: var(--color-bg-warning-tertiary);
+      color: var(--color-text-warning);
+      padding: 0.125rem calc(var(--spacing) * 1);
+      border-radius: var(--radius-sm);
+    }
+
+    &:where(kbd) {
+      font-family: inherit;
+      font-size: 0.85em;
+      font-weight: var(--font-weight-medium);
+      border: var(--stroke-border) solid var(--prose-rule);
+      border-block-end-width: var(--stroke-border-thick);
+      border-radius: var(--radius-sm);
+      padding: 0.0625em 0.35em;
+    }
+
+    &:where(:not(pre) > code) {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      border-radius: var(--radius-md);
+      background-color: var(--color-bg-base-tertiary);
+      color: var(--color-text-neutral);
+      padding: calc(var(--spacing) * 0.8) calc(var(--spacing) * 1.2);
+    }
+
+    &:where(a code) {
+      background-color: color-mix(in oklab, currentColor 8%, transparent);
+      color: var(--prose-muted);
+    }
+
+    &:where(:is(p, li) code) {
+      letter-spacing: calc(var(--tracking-tight) * 0.4);
+      word-spacing: calc(var(--spacing) * -0.8);
+      line-height: normal;
+    }
+
+    &:where(blockquote) {
+      --quote-fold: calc(var(--spacing) * 3);
+      --quote-fold-color: var(--color-border-base);
+      --quote-surface: var(--color-bg-base-tertiary);
+      --quote-cut: var(--color-bg-base);
+
+      position: relative;
+      margin-block-start: calc(var(--spacing) * 6);
+      padding: calc(var(--spacing) * 5);
+      border-radius: var(--radius-md);
+      border-start-end-radius: 0;
+      background-color: var(--quote-surface);
+      color: var(--prose-muted);
+    }
+
+    &:where(blockquote)::before,
+    &:where(blockquote)::after {
+      content: '';
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-end: 0;
+      inline-size: var(--quote-fold);
+      block-size: var(--quote-fold);
+      border: calc(var(--quote-fold) / 2) solid transparent;
+    }
+
+    &:where(blockquote)::before {
+      border-block-end-color: var(--quote-fold-color);
+      border-inline-start-color: var(--quote-fold-color);
+    }
+
+    &:where(blockquote)::after {
+      border-block-start-color: var(--quote-cut);
+      border-inline-end-color: var(--quote-cut);
+    }
+
+    &:where(blockquote blockquote) {
+      --quote-surface: var(--color-bg-base);
+      --quote-cut: var(--color-bg-base-tertiary);
+    }
+
+    &:where(blockquote blockquote blockquote) {
+      --quote-surface: var(--color-bg-base-tertiary);
+      --quote-cut: var(--color-bg-base);
+    }
+
+    &:where(hr) {
+      margin-block-start: calc(var(--prose-flow) * 3);
+      border-block-start: var(--stroke-border) solid var(--prose-rule);
+    }
+
+    &:where(hr + :is(h1, h2, h3, h4)) {
+      margin-block-start: var(--prose-flow);
+    }
+
+    &:where(img) {
+      margin-block-start: calc(var(--spacing) * 6);
+      border-radius: var(--radius-md);
+      outline: var(--stroke-border) solid var(--color-border-base-secondary);
+      outline-offset: calc(var(--stroke-border) * -1);
+    }
+
+    &:where(figcaption) {
+      margin-block-start: calc(var(--spacing) * 2);
+      font-size: var(--text-sm);
+      color: var(--prose-muted);
+    }
+
+    &:where(ul) {
+      list-style-type: disc;
+    }
+
+    &:where(ol) {
+      list-style-type: decimal;
+    }
+
+    &:where(ul ul) {
+      list-style-type: circle;
+    }
+
+    &:where(ul ul ul) {
+      list-style-type: square;
+    }
+
+    &:where(ul, ol) {
+      margin-block-start: var(--prose-flow);
+      padding-inline-start: calc(var(--spacing) * 4.5);
+    }
+
+    &:where(ol) {
+      padding-inline-start: calc(var(--spacing) * 7);
+    }
+
+    &:where(li) {
+      margin-block-start: calc(var(--spacing) * 0.5);
+      padding-inline-start: calc(var(--spacing) * 0.4);
+    }
+
+    &:where(li > :is(p, ul, ol)) {
+      margin-block-start: calc(var(--spacing) * 0.5);
+    }
+
+    &:where(:is(ul, ol) > li)::marker {
+      color: var(--color-text-base-tertiary);
+    }
+
+    &:where(.table-scroll) {
+      margin-block-start: calc(var(--spacing) * 6);
+    }
+
+    &:where(.table-scroll > *) {
+      margin-block-start: 0;
+    }
+
+    &:where(table) {
+      inline-size: 100%;
+      font-size: var(--text-sm);
+      line-height: var(--leading-normal);
+      font-variant-numeric: tabular-nums;
+      color: var(--prose-muted);
+    }
+
+    &:where(th, td) {
+      vertical-align: middle;
+      text-align: start;
+      padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+      white-space: nowrap;
+    }
+
+    &:where(th) {
+      color: var(--prose-foreground);
+      font-weight: var(--font-weight-medium);
+    }
+
+    &:where(tr:not(:last-child)) {
+      border-block-end: var(--stroke-border) solid var(--prose-rule);
+    }
+
+    &:where(:is(th, td):first-child) {
+      padding-inline-start: 0;
+    }
+
+    &:where(:is(th, td):last-child) {
+      padding-inline-end: 0;
+    }
+
+    &:where(.footnotes) {
+      margin-block-start: calc(var(--prose-flow) * 3);
+      padding-block-start: calc(var(--spacing) * 6);
+      border-block-start: var(--stroke-border) solid var(--prose-rule);
+      font-size: var(--text-sm);
+      color: var(--prose-muted);
+    }
+
+    &:where(.footnote-ref) {
+      font-size: 0.75em;
+      line-height: 0;
+    }
+
+    &:where(.footnote-ref a, .footnote-backref) {
+      color: var(--prose-muted);
+      text-decoration: none;
+    }
+
+    &:where(.footnote-ref a) {
+      padding-inline: 0.15em;
+    }
+  }
+
+  :where(pre code) {
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  @media (hover: hover) {
+    *:not(:where(.not-prose, .not-prose *)):where(a):hover {
+      text-decoration-color: transparent;
+    }
+  }
+
+  > :where(:first-child):not(:where(.not-prose, .not-prose *)),
+  :where(li > :first-child, blockquote > :first-child, td > :first-child, th > :first-child):not(
+    :where(.not-prose, .not-prose *)
+  ) {
+    margin-block-start: 0;
+  }
+}

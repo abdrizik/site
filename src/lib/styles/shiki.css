@@ -1,0 +1,103 @@
+.shiki {
+  code {
+    .line {
+      position: relative;
+      display: block !important;
+      white-space: pre;
+      padding-inline: calc(var(--spacing) * 4);
+      border-inline-start: var(--stroke-border-thick) solid transparent;
+
+      &.highlight,
+      &.highlighted {
+        border-inline-start-color: var(--color-border-brand);
+        background-color: var(--color-bg-brand-secondary);
+      }
+
+      &.highlighted.error {
+        border-inline-start-color: var(--color-border-danger);
+        background-color: var(--color-bg-danger-secondary);
+      }
+
+      &.highlighted.warning {
+        border-inline-start-color: var(--color-border-warning);
+        background-color: var(--color-bg-warning-secondary);
+      }
+
+      &.highlighted.info {
+        border-inline-start-color: var(--color-border-info-secondary);
+        background-color: var(--color-bg-info-secondary);
+      }
+
+      &.diff {
+        span:first-child::before {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          padding-inline-start: calc(var(--spacing) * 1.5);
+          pointer-events: none;
+        }
+
+        &.add {
+          border-inline-start-color: var(--color-border-success);
+          background-color: var(--color-bg-success-secondary);
+
+          span:first-child::before {
+            content: '+';
+            color: var(--color-text-success);
+          }
+        }
+
+        &.remove {
+          border-inline-start-color: var(--color-border-danger);
+          background-color: var(--color-bg-danger-secondary);
+
+          span:first-child::before {
+            content: '-';
+            color: var(--color-text-danger);
+          }
+        }
+      }
+
+      &.focused {
+        background-color: transparent;
+      }
+
+      &.has-focus:not(.focused) {
+        opacity: 0.4;
+        filter: blur(0.095rem);
+        transition:
+          opacity 350ms var(--ease-out),
+          filter 350ms var(--ease-out);
+      }
+    }
+
+    .highlighted-word {
+      padding-inline: calc(var(--spacing) * 0.5);
+      border-block-end: var(--stroke-border) solid var(--color-border-brand);
+      background-color: var(--color-bg-brand-secondary);
+    }
+  }
+}
+.shiki span {
+  font-style: var(--shiki-light-font-style, normal);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .shiki span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style, normal);
+  }
+}
+
+:root[data-theme='dark'] .shiki span {
+  color: var(--shiki-dark) !important;
+  font-style: var(--shiki-dark-font-style, normal);
+}
+
+.shiki::selection,
+.shiki ::selection {
+  background-color: light-dark(
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-400), transparent),
+    color-mix(in oklab, #fff var(--alpha-500), transparent)
+  );
+}
