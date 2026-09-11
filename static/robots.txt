@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Optional: Be gentle with crawling
+Crawl-delay: 1
