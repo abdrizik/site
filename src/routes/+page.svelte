@@ -8,7 +8,7 @@
   let { data }: PageProps = $props()
 
   const title = 'Abdelrahman Rizik - Design Engineer'
-  const description = 'Design systems, motion, and the details that make an interface feel right.'
+  const description = 'Design systems, motion, and the details that make an interface feel natural.'
 </script>
 
 <svelte:head>
