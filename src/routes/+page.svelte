@@ -18,14 +18,14 @@
     name="keywords"
     content="Abdelrahman Rizik, Design Engineer, JavaScript, TypeScript, Vue, React, SvelteKit, Node.js, Web Development"
   />
-  <link rel="canonical" href="https://abdrizik.xyz/" />
+  <link rel="canonical" href="https://abdrizik.com/" />
 
   <meta property="og:title" content="Abdelrahman Rizik - Design Engineer" />
   <meta
     property="og:description"
     content="Design Engineer passionate about modern web technologies. I build applications with JavaScript, TypeScript, Vue, React, SvelteKit, and Node.js."
   />
-  <meta property="og:url" content="https://abdrizik.xyz/" />
+  <meta property="og:url" content="https://abdrizik.com/" />
 
   <meta name="twitter:title" content="Abdelrahman Rizik - Design Engineer" />
   <meta
