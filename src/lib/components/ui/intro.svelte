@@ -44,7 +44,7 @@
     }
 
     b {
-      font-weight: var(--font-weight-medium);
+      font-weight: var(--font-weight-semibold);
     }
   }
 </style>
