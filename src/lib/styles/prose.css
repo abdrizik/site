@@ -22,7 +22,7 @@
     &:where(h1) {
       margin-block-start: var(--prose-flow);
       font-size: var(--text-2xl);
-      line-height: 1.2;
+      line-height: var(--leading-tight);
     }
 
     &:where(h2) {
@@ -34,7 +34,7 @@
     &:where(h3) {
       margin-block-start: calc(var(--prose-flow) * 2);
       font-size: var(--text-lg);
-      line-height: 1.4;
+      line-height: var(--leading-snug);
     }
 
     &:where(h4, h5, h6) {
