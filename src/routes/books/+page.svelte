@@ -2,10 +2,7 @@
   import { shelves, years } from '$lib/data/books'
 </script>
 
-<svelte:head>
-  <title>Books | Abdelrahman Rizik</title>
-  <meta name="description" content="What I'm reading." />
-</svelte:head>
+<h1 data-sr-only>Books</h1>
 
 <p data-intro>Books I've read.</p>
 

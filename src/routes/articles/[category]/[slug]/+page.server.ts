@@ -13,6 +13,10 @@ export async function load({ params }) {
 
   return {
     document: await parseMarkdown(raw.trim(), { plugins }),
-    metadata
+    metadata,
+    title: metadata.title,
+    description: metadata.description,
+    type: 'article' as const,
+    published: metadata.publishAt
   }
 }

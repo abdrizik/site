@@ -9,13 +9,7 @@
   import MilkstrawSidebar from '$lib/components/lab/milkstraw-sidebar.svelte'
 </script>
 
-<svelte:head>
-  <title>Lab | Abdelrahman Rizik</title>
-  <meta
-    name="description"
-    content="Experiments, and things I liked on the web rebuilt to see how they work."
-  />
-</svelte:head>
+<h1 data-sr-only>Lab</h1>
 
 <p data-intro>Experiments, and things I liked on the web &mdash; rebuilt to see how they work.</p>
 
@@ -70,11 +64,6 @@
 </div>
 
 <style>
-  [data-intro] {
-    padding-block-end: calc(var(--spacing) * 8);
-    border-block-end: var(--stroke-border) solid var(--color-border-base-tertiary);
-  }
-
   div {
     --card: min(calc(var(--spacing) * 128), 100%);
     display: flex;

@@ -8,11 +8,6 @@
   const { document, metadata } = $derived(data)
 </script>
 
-<svelte:head>
-  <title>{metadata.title} | Abdelrahman Rizik</title>
-  <meta name="description" content={metadata.description} />
-</svelte:head>
-
 <div>
   <ArticleHeader {metadata} />
 

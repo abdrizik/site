@@ -2,10 +2,7 @@
   import { groups } from '$lib/data/uses'
 </script>
 
-<svelte:head>
-  <title>Uses | Abdelrahman Rizik</title>
-  <meta name="description" content="The tools I build with." />
-</svelte:head>
+<h1 data-sr-only>Uses</h1>
 
 <p data-intro>The tools I build with.</p>
 
@@ -17,7 +14,7 @@
       <ul>
         {#each group.tools as tool (tool.title)}
           <li>
-            <h3>{tool.title}</h3>
+            <h4>{tool.title}</h4>
 
             <p>{tool.description}</p>
           </li>
@@ -40,7 +37,7 @@
     }
 
     li {
-      h3 {
+      h4 {
         font-size: var(--text-base);
         font-weight: var(--font-weight-normal);
         color: var(--color-text-base);
