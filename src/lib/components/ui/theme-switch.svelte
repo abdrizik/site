@@ -1,17 +1,22 @@
 <script lang="ts">
+  import { getSound } from '$lib/utils/sound-context'
+
   function toggle() {
     const root = document.documentElement
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark'
 
     root.dataset.theme = theme
+    sound.play('theme')
 
     try {
       localStorage.setItem('theme', theme)
     } catch {}
   }
+
+  const sound = getSound()
 </script>
 
-<button type="button" onclick={toggle} aria-label="Toggle theme">
+<button type="button" onclick={toggle} aria-label="Toggle theme" data-icon-button>
   {@render themeIcon()}
 </button>
 
@@ -27,47 +32,13 @@
 {/snippet}
 
 <style>
-  button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-icon-base-secondary);
-    transition:
-      color 150ms var(--ease-out),
-      scale 150ms var(--ease-out);
+  button svg {
+    inline-size: calc(var(--spacing) * 4);
+    block-size: calc(var(--spacing) * 4);
+    transition: rotate 200ms var(--ease-in-out-cubic);
 
-    @media (hover: hover) {
-      &:hover {
-        color: var(--color-icon-secondary-hover);
-      }
-    }
-
-    &:active {
-      scale: 0.97;
-    }
-
-    &:focus-visible {
-      border-radius: calc(infinity * 1px);
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      inline-size: calc(var(--spacing) * 11);
-      block-size: calc(var(--spacing) * 11);
-    }
-
-    svg {
-      inline-size: calc(var(--spacing) * 4);
-      block-size: calc(var(--spacing) * 4);
-      transition: rotate 200ms var(--ease-out-quad);
-
-      :global(:root[data-theme='dark']) & {
-        rotate: 180deg;
-      }
+    :global(:root[data-theme='dark']) & {
+      rotate: 180deg;
     }
   }
 </style>

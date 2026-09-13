@@ -1,6 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths'
   import { page } from '$app/state'
+  import SoundSwitch from './sound-switch.svelte'
   import type { Attachment } from 'svelte/attachments'
   import ThemeSwitch from './theme-switch.svelte'
 
@@ -58,7 +59,10 @@
     {/each}
   </ul>
 
-  <ThemeSwitch />
+  <div class="controls">
+    <SoundSwitch />
+    <ThemeSwitch />
+  </div>
 </nav>
 
 <style>
@@ -73,6 +77,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--spacing) * 8);
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 1);
   }
 
   li {

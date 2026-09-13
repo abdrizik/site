@@ -1,6 +1,7 @@
 <script lang="ts">
   import TextMorph from './text-morph.svelte'
   import { createClipboard } from '$lib/utils/clipboard.svelte'
+  import { getSound } from '$lib/utils/sound-context'
 
   type Props = {
     text: string
@@ -9,9 +10,18 @@
   let { text }: Props = $props()
 
   const clipboard = createClipboard()
+
+  const sound = getSound()
 </script>
 
-<button type="button" aria-label="Copy code" onclick={() => clipboard.copy(text)}>
+<button
+  type="button"
+  aria-label="Copy code"
+  onclick={() => {
+    sound.play('copy')
+    clipboard.copy(text)
+  }}
+>
   <TextMorph text={clipboard.copied ? 'copied' : 'copy'} aria-hidden="true" />
   <span data-sr-only role="status">{clipboard.copied ? 'Copied' : ''}</span>
 </button>
