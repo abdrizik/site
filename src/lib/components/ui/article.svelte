@@ -45,6 +45,7 @@
 
     span + span {
       flex: 1;
+      align-self: center;
       min-inline-size: calc(var(--spacing) * 4);
       border-block-end: var(--stroke-border) dotted var(--color-border-base-secondary);
     }
