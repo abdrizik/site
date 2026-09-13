@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: A warm introduction to the blog and exploring the timeless tradition of "Hello World" in programming.
-category: Getting Started
+category: Engineering
 tags:
   - introduction
   - getting-started
@@ -55,7 +55,7 @@ The reason for the change was interesting—the B programming language had a lim
 I learned about this fascinating programming history from the Learn Go with Pocket Sized Projects book:
 
 ::side-note{note="Aliénor Latour, Donia Chaiehloudj and Pascal Bertrand, Manning, 2024. The first chapter opens with this history before writing a single line of Go."}
-::book-cover{src="/images/content/learn-pocket-sized-projects.jpg" alt="Learn Go with Pocket-Sized Projects Book Cover" caption="Learn Go with Pocket-Sized Projects"}
+::book-cover{src="/images/content/learn-pocket-sized-projects.webp" alt="Learn Go with Pocket-Sized Projects Book Cover" caption="Learn Go with Pocket-Sized Projects"}
 ::
 ::
 
