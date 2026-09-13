@@ -12,7 +12,6 @@
     <meta name="author" content="Abdelrahman Rizik" />
 
     <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Abdelrahman Rizik" />
     <meta property="og:image" content="https://abdrizik.com/og.png" />
@@ -42,7 +41,9 @@
     %sveltekit.head%
     <script>
       try {
-        document.documentElement.dataset.theme =
+        const root = document.documentElement
+
+        root.dataset.theme =
           localStorage.getItem('theme') ||
           (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
       } catch {}
