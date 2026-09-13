@@ -47,11 +47,9 @@
           rotate 300ms var(--ease-out-expo);
       }
 
-      @media (hover: hover) and (pointer: fine) {
-        &:hover img {
-          opacity: 1;
-          rotate: 0deg;
-        }
+      &:hover img {
+        opacity: 1;
+        rotate: 0deg;
       }
     }
   }

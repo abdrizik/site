@@ -40,11 +40,9 @@
       }
     }
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover li {
-        translate: 0 0;
-        rotate: 0deg;
-      }
+    &:hover li {
+      translate: 0 0;
+      rotate: 0deg;
     }
   }
 </style>

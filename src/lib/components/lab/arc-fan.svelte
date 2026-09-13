@@ -47,11 +47,9 @@
         inline-size: 100%;
       }
 
-      @media (hover: hover) and (pointer: fine) {
-        &:hover img {
-          rotate: calc(var(--a) * -1);
-          translate: 0 calc(var(--spacing) * -3);
-        }
+      &:hover img {
+        rotate: calc(var(--a) * -1);
+        translate: 0 calc(var(--spacing) * -3);
       }
     }
   }
