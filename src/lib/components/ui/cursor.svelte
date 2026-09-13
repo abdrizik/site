@@ -1,11 +1,10 @@
 <script lang="ts">
-  import type { Attachment } from 'svelte/attachments'
   import { MediaQuery } from 'svelte/reactivity'
 
   const fine = new MediaQuery('(hover: hover) and (pointer: fine)')
 
-  let x = 0
-  let y = 0
+  let x = $state(0)
+  let y = $state(0)
 
   let text = $state('')
   let shown = $state(false)
@@ -22,25 +21,15 @@
     if (label) text = label
   }
 
-  const follow: Attachment<HTMLElement> = (node) => {
-    let frame: number
-
-    const tick = () => {
-      node.style.translate = `${x}px ${y}px`
-      frame = requestAnimationFrame(tick)
-    }
-    tick()
-
-    return () => cancelAnimationFrame(frame)
+  function track(event: PointerEvent) {
+    x = event.clientX
+    y = event.clientY
+    visible = true
   }
 </script>
 
 <svelte:document
-  onpointermove={(event) => {
-    x = event.clientX
-    y = event.clientY
-    visible = true
-  }}
+  onpointermove={track}
   onpointerover={(event) => inspect(event.target)}
   onpointerdown={() => (pressed = true)}
   onpointerup={() => (pressed = false)}
@@ -67,7 +56,7 @@
 
 {#if fine.current}
   <div class={['layer', { visible, pressed, interactive }]} data-cursor-layer aria-hidden="true">
-    <div class="pos" {@attach follow}>
+    <div class="pos" style:translate="{x}px {y}px">
       {@render arrow()}
       {@render hand()}
 
