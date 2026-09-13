@@ -63,7 +63,7 @@
     svg {
       inline-size: calc(var(--spacing) * 4);
       block-size: calc(var(--spacing) * 4);
-      transition: rotate 280ms var(--ease-in-out-cubic);
+      transition: rotate 200ms var(--ease-out-quad);
 
       :global(:root[data-theme='dark']) & {
         rotate: 180deg;
