@@ -125,14 +125,12 @@
       }
     }
 
-    @media (hover: hover) {
-      &:hover {
-        color: var(--color-text-base);
-      }
+    &:hover {
+      color: var(--color-text-base);
+    }
 
-      &.brand:hover {
-        opacity: 1;
-      }
+    &.brand:hover {
+      opacity: 1;
     }
 
     &:focus-visible {
@@ -146,7 +144,7 @@
         translate 150ms var(--ease-out);
     }
 
-    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    @media (prefers-reduced-motion: no-preference) {
       &:not(.brand):hover {
         translate: calc(var(--spacing) * 0.5) 0;
       }

@@ -82,12 +82,10 @@
         rotate: -1deg;
       }
 
-      @media (hover: hover) and (pointer: fine) {
-        figure:hover,
-        p:hover {
-          z-index: 7;
-          rotate: 0deg;
-        }
+      figure:hover,
+      p:hover {
+        z-index: 7;
+        rotate: 0deg;
       }
     }
   }

@@ -17,7 +17,8 @@
     place-items: center;
     inline-size: 100%;
     block-size: 100%;
-    padding: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
+    padding-inline: calc(var(--spacing) * 14);
     background-color: var(--color-bg-base-secondary);
   }
 
@@ -32,7 +33,7 @@
   }
 
   .paper {
-    --zig: 3px;
+    --zig: 2px;
     block-size: 100%;
     background-color: var(--color-bg-base);
     mask:
