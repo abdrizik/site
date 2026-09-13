@@ -47,7 +47,7 @@
 <DemoCard>
   <button type="button" aria-pressed={active} onclick={toggle}>
     <img
-      src="/images/lab/loupe.jpg"
+      src="/images/lab/loupe.webp"
       alt="A loupe following the pointer, magnifying the page underneath it"
       loading="lazy"
       draggable="false"
