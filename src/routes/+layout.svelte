@@ -27,7 +27,7 @@
       mute: '/sounds/mute.wav',
       unmute: '/sounds/unmute.wav'
     },
-    enabled: browser && localStorage.getItem('sound') === 'on'
+    enabled: browser && localStorage.getItem('sound') !== 'off'
   })
 
   setSound(player)
