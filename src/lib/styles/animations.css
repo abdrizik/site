@@ -1,11 +1,8 @@
-*,
-*::before,
-*::after {
+body {
   transition:
     background-color 300ms var(--ease-out),
     border-color 300ms var(--ease-out),
-    color 300ms var(--ease-out),
-    fill 300ms var(--ease-out);
+    color 300ms var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {
