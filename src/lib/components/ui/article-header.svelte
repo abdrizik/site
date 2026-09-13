@@ -28,8 +28,9 @@
 
     h1 {
       margin-block-end: calc(var(--spacing) * 6);
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-semibold);
+      font-size: var(--text-2xl);
+      line-height: var(--leading-tight);
+      font-weight: var(--font-weight-medium);
       color: var(--color-text-base);
       text-wrap: balance;
     }

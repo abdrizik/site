@@ -29,6 +29,7 @@
 
 <style>
   h1 {
+    font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-base);
   }
