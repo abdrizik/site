@@ -13,7 +13,10 @@
     </svg>
 
     <div>
-      <small>Set in <b>Switzer</b> and <b data-serif>Literata</b></small>
+      <small>
+        Set in <b>Switzer</b> and <b data-serif>Literata</b> &bull; Built with <b>SvelteKit</b>
+      </small>
+      <small>Designed by a <b>human</b></small>
       <small>&copy; {year} Abdelrahman Rizik</small>
     </div>
   </div>
