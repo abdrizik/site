@@ -32,18 +32,21 @@
 
 <style>
   .band {
-    position: fixed;
+    position: absolute;
     inset: 0 var(--page-gutter);
     margin-inline: auto;
     max-inline-size: var(--container-5xl);
     background-color: var(--color-bg-base);
     border-inline: var(--stroke-border) solid var(--color-border-base-tertiary);
+    transition:
+      background-color 200ms var(--ease-out),
+      border-color 200ms var(--ease-out);
   }
 
   .shell {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 36);
+    gap: calc(var(--spacing) * 16);
     position: relative;
     margin-inline: auto;
     max-inline-size: min(
@@ -52,7 +55,7 @@
     );
     min-block-size: 100dvh;
     padding-inline: var(--page-pad);
-    padding-block: calc(var(--spacing) * 24) calc(var(--spacing) * 12);
+    padding-block: calc(var(--spacing) * 14) calc(var(--spacing) * 12);
 
     main {
       position: relative;
@@ -64,6 +67,11 @@
         inset-inline: 0;
         pointer-events: none;
       }
+    }
+
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 36);
+      padding-block-start: calc(var(--spacing) * 24);
     }
   }
 </style>
