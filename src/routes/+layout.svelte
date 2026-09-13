@@ -1,20 +1,75 @@
 <script lang="ts">
+  import { browser } from '$app/environment'
   import { page } from '$app/state'
   import Cursor from '$lib/components/ui/cursor.svelte'
   import Footer from '$lib/components/ui/footer.svelte'
   import Nav from '$lib/components/ui/nav.svelte'
   import '$lib/styles/main.css'
+  import { setSound } from '$lib/utils/sound-context'
+  import { createSound } from '$lib/utils/sound.svelte'
   import { blur } from 'svelte/transition'
 
   const { children } = $props()
+
+  const canonical = $derived(`https://abdrizik.com${page.url.pathname}`)
+
+  const title = $derived(
+    page.data.title
+      ? `${page.data.title} | Abdelrahman Rizik`
+      : 'Abdelrahman Rizik - Design Engineer'
+  )
+
+  const player = createSound({
+    sounds: {
+      nav: '/sounds/nav.wav',
+      theme: '/sounds/theme.wav',
+      copy: '/sounds/copy.wav',
+      mute: '/sounds/mute.wav',
+      unmute: '/sounds/unmute.wav'
+    },
+    enabled: browser && localStorage.getItem('sound') === 'on'
+  })
+
+  setSound(player)
+
+  function click(event: MouseEvent) {
+    const target = event.target
+
+    if (target instanceof Element && target.closest('a[href]')) player.play('nav')
+  }
+
+  $effect(() => {
+    try {
+      localStorage.setItem('sound', player.enabled ? 'on' : 'off')
+    } catch {}
+  })
 </script>
+
+<svelte:document onclick={click} />
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={page.data.description} />
+  <link rel="canonical" href={canonical} />
+
+  <meta property="og:type" content={page.data.type} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={page.data.description} />
+  <meta property="og:url" content={canonical} />
+
+  {#if page.data.published}
+    <meta property="article:published_time" content={page.data.published} />
+  {/if}
+</svelte:head>
+
+<a class="skip" href="#main">Skip to content</a>
 
 <div class="band"></div>
 
 <div class="shell">
   <Nav />
 
-  <main>
+  <main id="main">
     {#key page.url.pathname}
       <div
         in:blur={{ duration: 600, delay: 200, amount: 4 }}
@@ -31,6 +86,23 @@
 <Cursor />
 
 <style>
+  .skip {
+    position: absolute;
+    inset-block-start: calc(var(--spacing) * 2);
+    inset-inline-start: calc(var(--spacing) * 2);
+    z-index: 10;
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    color: var(--color-text-base);
+    background-color: var(--color-bg-base);
+    border: var(--stroke-border) solid var(--color-border-base-tertiary);
+    border-radius: var(--radius-md);
+    translate: 0 calc(-100% - var(--spacing) * 4);
+
+    &:focus-visible {
+      translate: 0 0;
+    }
+  }
+
   .band {
     position: absolute;
     inset: 0 var(--page-gutter);
@@ -58,13 +130,15 @@
     padding-block: calc(var(--spacing) * 14) calc(var(--spacing) * 12);
 
     main {
-      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
       margin-block-end: calc(var(--spacing) * 12);
 
+      > * {
+        grid-area: 1 / 1;
+      }
+
       > :not(:last-child) {
-        position: absolute;
-        inset-block-start: 0;
-        inset-inline: 0;
         pointer-events: none;
       }
     }
