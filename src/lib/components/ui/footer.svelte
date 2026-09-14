@@ -2,6 +2,8 @@
   import Socials from './socials.svelte'
   import Visits from './visits.svelte'
 
+  const { visits }: { visits: number } = $props()
+
   const year = new Date().getFullYear()
 </script>
 
@@ -38,7 +40,7 @@
   </div>
 
   <div>
-    <small><Visits /></small>
+    <small><Visits {visits} /></small>
     <span aria-hidden="true"></span>
     <Socials />
   </div>

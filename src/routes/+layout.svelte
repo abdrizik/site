@@ -9,7 +9,7 @@
   import { createSound } from '$lib/utils/sound.svelte'
   import { blur } from 'svelte/transition'
 
-  const { children } = $props()
+  const { children, data } = $props()
 
   const canonical = $derived(`https://abdrizik.com${page.url.pathname}`)
 
@@ -80,7 +80,7 @@
     {/key}
   </main>
 
-  <Footer />
+  <Footer visits={data.visits} />
 </div>
 
 <Cursor />
