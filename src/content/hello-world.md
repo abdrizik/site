@@ -21,8 +21,6 @@ Every programming journey starts with these two magical words. But why?
 >
 > Instead, we print a welcoming message to the world.
 
-Here's a simple footnote,[^1] and here's a longer one.[^bignote]
-
 Since 1972, programmers have been discovering new languages through the same simple phrase: **"Hello, World!"**
 
 It's like a rite of passage. You type it, run it, see it work, and smile. That moment when your code first talks back to you? Pure magic. ✨
@@ -99,7 +97,3 @@ _italic text_
 1. ordered list
 2. ordered list
 ```
-
-[^1]: This is the first footnote.
-
-[^bignote]: Here's one with multiple paragraphs and code.
