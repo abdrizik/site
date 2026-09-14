@@ -75,14 +75,12 @@
       margin-inline: calc(var(--page-pad) * -1);
       padding-inline: var(--page-pad);
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
       overscroll-behavior-x: contain;
       scrollbar-width: none;
     }
 
     li {
       flex: 0 0 var(--card);
-      scroll-snap-align: center;
     }
   }
 </style>
