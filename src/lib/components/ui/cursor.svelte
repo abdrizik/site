@@ -97,6 +97,10 @@
     inline-size: calc(var(--spacing) * 3.75);
     block-size: calc(var(--spacing) * 3.75);
     color: var(--color-text-base);
+    stroke: var(--color-bg-base);
+    stroke-width: 3;
+    stroke-linejoin: round;
+    paint-order: stroke fill;
     transition:
       scale 160ms var(--ease-out-quad),
       opacity 160ms var(--ease-out-quad),
