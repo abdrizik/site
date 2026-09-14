@@ -6,7 +6,6 @@
   import Deck from '$lib/components/lab/deck.svelte'
   import HoverPreview from '$lib/components/lab/hover-preview.svelte'
   import Loupe from '$lib/components/lab/loupe.svelte'
-  import MilkstrawSidebar from '$lib/components/lab/milkstraw-sidebar.svelte'
 </script>
 
 <h1 data-sr-only>Lab</h1>
@@ -37,17 +36,6 @@
 
     <ul>
       <li><Loupe /></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 data-row>
-      <span data-row-label>Navigation</span>
-      <span data-row-meta>1 experiment</span>
-    </h2>
-
-    <ul>
-      <li><MilkstrawSidebar /></li>
     </ul>
   </section>
 
