@@ -37,7 +37,7 @@
     font-family: var(--font-sans);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-neutral-tertiary);
+    color: var(--color-text-neutral-secondary);
     user-select: none;
     border-radius: var(--radius-md);
 

@@ -90,7 +90,7 @@
   }
 
   a {
-    color: var(--color-text-base-tertiary);
+    color: var(--color-text-base-secondary);
     transition: color 150ms ease;
 
     @media (hover: hover) {

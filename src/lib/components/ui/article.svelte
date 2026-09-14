@@ -54,7 +54,7 @@
       flex-shrink: 0;
       font-size: var(--text-sm);
       font-variant-numeric: tabular-nums;
-      color: var(--color-text-base-tertiary);
+      color: var(--color-text-base-secondary);
     }
   }
 </style>

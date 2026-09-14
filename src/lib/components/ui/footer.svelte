@@ -57,7 +57,7 @@
     padding-block-start: calc(var(--spacing) * 6);
     font-size: var(--text-sm);
     font-variant-numeric: tabular-nums;
-    color: var(--color-text-base-tertiary);
+    color: var(--color-text-base-secondary);
 
     > div:first-child {
       display: flex;

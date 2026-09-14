@@ -39,7 +39,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: calc(var(--spacing) * 1);
-      color: var(--color-text-neutral-tertiary);
+      color: var(--color-text-neutral-secondary);
 
       dd {
         color: var(--color-text-base);
