@@ -8,6 +8,14 @@
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "site",
+      "database_id": "f48cbc8a-1c24-4b40-95d8-b16c92233909",
+      "migrations_dir": "migrations"
+    }
+  ],
   "observability": {
     "logs": {
       "enabled": true,
