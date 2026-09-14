@@ -30,7 +30,7 @@
 
     p {
       font-size: var(--text-sm);
-      color: var(--color-text-base-tertiary);
+      color: var(--color-text-base-secondary);
       font-variant-numeric: tabular-nums;
     }
 
