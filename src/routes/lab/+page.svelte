@@ -1,10 +1,8 @@
 <script lang="ts">
   import ArcFan from '$lib/components/lab/arc-fan.svelte'
   import AzIndex from '$lib/components/lab/az-index.svelte'
-  import BookmarkCard from '$lib/components/lab/bookmark-card.svelte'
   import Collage from '$lib/components/lab/collage.svelte'
   import Deck from '$lib/components/lab/deck.svelte'
-  import HoverPreview from '$lib/components/lab/hover-preview.svelte'
   import Loupe from '$lib/components/lab/loupe.svelte'
 </script>
 
@@ -16,13 +14,12 @@
   <section>
     <h2 data-row>
       <span data-row-label>Book covers</span>
-      <span data-row-meta>5 experiments</span>
+      <span data-row-meta>4 experiments</span>
     </h2>
 
     <ul>
       <li><ArcFan /></li>
       <li><Deck /></li>
-      <li><HoverPreview /></li>
       <li><Collage /></li>
       <li><AzIndex /></li>
     </ul>
@@ -36,17 +33,6 @@
 
     <ul>
       <li><Loupe /></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 data-row>
-      <span data-row-label>Layout</span>
-      <span data-row-meta>1 experiment</span>
-    </h2>
-
-    <ul>
-      <li><BookmarkCard /></li>
     </ul>
   </section>
 </div>
