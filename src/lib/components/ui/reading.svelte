@@ -29,6 +29,10 @@
       border-block-end: var(--stroke-border) solid var(--color-border-base-tertiary);
     }
 
+    [data-row-label] {
+      font-weight: var(--font-weight-medium);
+    }
+
     [data-row-meta] {
       font-variant-numeric: normal;
       text-align: end;

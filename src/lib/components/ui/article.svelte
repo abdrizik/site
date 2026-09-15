@@ -43,6 +43,10 @@
       opacity: 0.6;
     }
 
+    span:first-of-type {
+      font-weight: var(--font-weight-medium);
+    }
+
     span + span {
       flex: 1;
       align-self: center;
