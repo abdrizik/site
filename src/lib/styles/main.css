@@ -59,7 +59,7 @@
   }
 
   html {
-    scrollbar-color: var(--color-icon-base-tertiary) var(--color-bg-base-secondary);
+    scrollbar-color: var(--color-icon-neutral-tertiary) var(--color-bg-base-secondary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-padding-block-start: calc(var(--spacing) * 20);

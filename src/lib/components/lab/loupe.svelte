@@ -126,6 +126,6 @@
     block-size: calc(var(--spot) * 2);
     translate: var(--x) var(--y);
     border-radius: 50%;
-    box-shadow: inset 0 0 15px 5px color-mix(in oklab, var(--color-text-base) 55%, transparent);
+    box-shadow: inset 0 0 15px 5px color-mix(in oklab, var(--color-text-neutral) 55%, transparent);
   }
 </style>

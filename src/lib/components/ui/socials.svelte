@@ -100,12 +100,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-icon-base-secondary);
+    color: var(--color-icon-neutral-secondary);
     transition: color 150ms ease;
 
     @media (hover: hover) {
       &:hover {
-        color: var(--color-icon-base);
+        color: var(--color-icon-neutral);
       }
     }
 

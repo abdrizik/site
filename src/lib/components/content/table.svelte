@@ -21,6 +21,6 @@
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-icon-base-tertiary) transparent;
+    scrollbar-color: var(--color-icon-neutral-tertiary) transparent;
   }
 </style>

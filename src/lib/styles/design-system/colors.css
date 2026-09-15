@@ -10,32 +10,32 @@
   --alpha-900: 75%;
   --alpha-1000: 90%;
 
-  --color-bg-base: light-dark(#fff, var(--color-stone-900));
+  --color-bg-base: light-dark(#fff, var(--color-neutral-900));
   --color-bg-base-hover: light-dark(
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-100), #fff),
-    color-mix(in srgb, #fff var(--alpha-200), var(--color-stone-900))
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-100), #fff),
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-900))
   );
   --color-bg-base-secondary: light-dark(
-    var(--color-stone-50),
-    color-mix(in oklab, var(--color-stone-950) 50%, var(--color-stone-900))
+    var(--color-neutral-50),
+    color-mix(in oklab, var(--color-neutral-950) 50%, var(--color-neutral-900))
   );
   --color-bg-base-secondary-hover: light-dark(
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-200), var(--color-stone-50)),
-    color-mix(in srgb, #fff var(--alpha-200), var(--color-stone-950))
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-200), var(--color-neutral-50)),
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-950))
   );
-  --color-bg-base-tertiary: light-dark(var(--color-stone-100), var(--color-stone-800));
+  --color-bg-base-tertiary: light-dark(var(--color-neutral-100), var(--color-neutral-800));
   --color-bg-base-tertiary-hover: light-dark(
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-200), var(--color-stone-100)),
-    color-mix(in srgb, #fff var(--alpha-200), var(--color-stone-800))
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-200), var(--color-neutral-100)),
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-800))
   );
   --color-bg-disabled: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-200), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-200), transparent),
     color-mix(in oklab, #fff var(--alpha-100), transparent)
   );
   --color-bg-brand: light-dark(var(--color-emerald-600), var(--color-emerald-600));
   --color-bg-brand-hover: light-dark(
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-300), var(--color-emerald-600)),
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-300), var(--color-emerald-600))
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-emerald-600)),
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-emerald-600))
   );
   --color-bg-brand-secondary: light-dark(
     var(--color-emerald-100),
@@ -53,25 +53,25 @@
     var(--color-emerald-100),
     color-mix(in oklab, var(--color-emerald-500) var(--alpha-400), transparent)
   );
-  --color-bg-neutral: light-dark(var(--color-stone-900), var(--color-stone-100));
+  --color-bg-neutral: light-dark(var(--color-neutral-900), var(--color-neutral-100));
   --color-bg-neutral-hover: light-dark(
-    color-mix(in srgb, #fff var(--alpha-200), var(--color-stone-900)),
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-200), var(--color-stone-100))
+    color-mix(in srgb, #fff var(--alpha-200), var(--color-neutral-900)),
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-200), var(--color-neutral-100))
   );
   --color-bg-neutral-secondary: light-dark(
-    var(--color-stone-100),
+    var(--color-neutral-100),
     color-mix(in oklab, #fff var(--alpha-300), transparent)
   );
   --color-bg-neutral-secondary-hover: light-dark(
-    var(--color-stone-200),
+    var(--color-neutral-200),
     color-mix(in oklab, #fff var(--alpha-400), transparent)
   );
   --color-bg-neutral-tertiary: light-dark(
-    var(--color-stone-50),
+    var(--color-neutral-50),
     color-mix(in oklab, #fff var(--alpha-200), transparent)
   );
   --color-bg-neutral-tertiary-hover: light-dark(
-    var(--color-stone-100),
+    var(--color-neutral-100),
     color-mix(in oklab, #fff var(--alpha-300), transparent)
   );
   --color-bg-info: light-dark(var(--color-blue-600), var(--color-blue-500));
@@ -139,8 +139,8 @@
   );
   --color-bg-danger: light-dark(var(--color-red-600), var(--color-red-500));
   --color-bg-danger-hover: light-dark(
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-300), var(--color-red-600)),
-    color-mix(in srgb, var(--color-stone-950) var(--alpha-300), var(--color-red-500))
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-red-600)),
+    color-mix(in srgb, var(--color-neutral-950) var(--alpha-300), var(--color-red-500))
   );
   --color-bg-danger-secondary: light-dark(
     var(--color-red-100),
@@ -174,22 +174,22 @@
     color-mix(in oklab, #000 var(--alpha-800), transparent),
     color-mix(in oklab, #000 var(--alpha-800), transparent)
   );
-  --color-text-base: light-dark(var(--color-stone-950), #fff);
-  --color-text-base-secondary: light-dark(var(--color-stone-500), var(--color-stone-400));
-  --color-text-base-tertiary: light-dark(var(--color-stone-400), var(--color-stone-400));
-  --color-text-disabled: light-dark(var(--color-stone-400), var(--color-stone-400));
+  --color-text-base: light-dark(var(--color-neutral-950), #fff);
+  --color-text-base-secondary: light-dark(var(--color-neutral-500), var(--color-neutral-400));
+  --color-text-base-tertiary: light-dark(var(--color-neutral-400), var(--color-neutral-500));
+  --color-text-disabled: light-dark(var(--color-neutral-400), var(--color-neutral-400));
   --color-text-brand: light-dark(var(--color-emerald-800), var(--color-emerald-300));
   --color-text-brand-secondary: light-dark(var(--color-emerald-700), var(--color-emerald-400));
   --color-text-brand-tertiary: light-dark(var(--color-emerald-600), var(--color-emerald-500));
   --color-text-on-brand: light-dark(#fff, #fff);
   --color-text-on-brand-secondary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
   --color-text-on-brand-tertiary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
-  --color-text-neutral: light-dark(var(--color-stone-700), var(--color-stone-300));
-  --color-text-neutral-secondary: light-dark(var(--color-stone-600), var(--color-stone-400));
-  --color-text-neutral-tertiary: light-dark(var(--color-stone-500), var(--color-stone-500));
-  --color-text-on-neutral: light-dark(#fff, var(--color-stone-950));
-  --color-text-on-neutral-secondary: light-dark(var(--color-stone-700), var(--color-stone-300));
-  --color-text-on-neutral-tertiary: light-dark(var(--color-stone-700), var(--color-stone-300));
+  --color-text-neutral: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-text-neutral-secondary: light-dark(var(--color-neutral-600), var(--color-neutral-400));
+  --color-text-neutral-tertiary: light-dark(var(--color-neutral-500), var(--color-neutral-500));
+  --color-text-on-neutral: light-dark(#fff, var(--color-neutral-950));
+  --color-text-on-neutral-secondary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-text-on-neutral-tertiary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
   --color-text-info: light-dark(var(--color-blue-700), var(--color-blue-300));
   --color-text-info-secondary: light-dark(var(--color-blue-600), var(--color-blue-400));
   --color-text-info-tertiary: light-dark(var(--color-blue-500), var(--color-blue-500));
@@ -214,22 +214,22 @@
   --color-text-on-danger: light-dark(#fff, #fff);
   --color-text-on-danger-secondary: light-dark(var(--color-red-800), var(--color-red-300));
   --color-text-on-danger-tertiary: light-dark(var(--color-red-700), var(--color-red-300));
-  --color-icon-base: light-dark(var(--color-stone-950), #fff);
-  --color-icon-base-secondary: light-dark(var(--color-stone-500), var(--color-stone-400));
-  --color-icon-base-tertiary: light-dark(var(--color-stone-400), var(--color-stone-400));
-  --color-icon-disabled: light-dark(var(--color-stone-400), var(--color-stone-400));
+  --color-icon-base: light-dark(var(--color-neutral-950), #fff);
+  --color-icon-base-secondary: light-dark(var(--color-neutral-500), var(--color-neutral-400));
+  --color-icon-base-tertiary: light-dark(var(--color-neutral-400), var(--color-neutral-500));
+  --color-icon-disabled: light-dark(var(--color-neutral-400), var(--color-neutral-400));
   --color-icon-brand: light-dark(var(--color-emerald-800), var(--color-emerald-300));
   --color-icon-brand-secondary: light-dark(var(--color-emerald-700), var(--color-emerald-400));
   --color-icon-brand-tertiary: light-dark(var(--color-emerald-600), var(--color-emerald-500));
   --color-icon-on-brand: light-dark(#fff, #fff);
   --color-icon-on-brand-secondary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
   --color-icon-on-brand-tertiary: light-dark(var(--color-emerald-800), var(--color-emerald-300));
-  --color-icon-neutral: light-dark(var(--color-stone-700), var(--color-stone-300));
-  --color-icon-neutral-secondary: light-dark(var(--color-stone-600), var(--color-stone-400));
-  --color-icon-neutral-tertiary: light-dark(var(--color-stone-500), var(--color-stone-500));
-  --color-icon-on-neutral: light-dark(#fff, var(--color-stone-950));
-  --color-icon-on-neutral-secondary: light-dark(var(--color-stone-700), var(--color-stone-300));
-  --color-icon-on-neutral-tertiary: light-dark(var(--color-stone-700), var(--color-stone-300));
+  --color-icon-neutral: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-icon-neutral-secondary: light-dark(var(--color-neutral-600), var(--color-neutral-400));
+  --color-icon-neutral-tertiary: light-dark(var(--color-neutral-500), var(--color-neutral-500));
+  --color-icon-on-neutral: light-dark(#fff, var(--color-neutral-950));
+  --color-icon-on-neutral-secondary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
+  --color-icon-on-neutral-tertiary: light-dark(var(--color-neutral-700), var(--color-neutral-300));
   --color-icon-info: light-dark(var(--color-blue-700), var(--color-blue-300));
   --color-icon-info-secondary: light-dark(var(--color-blue-600), var(--color-blue-400));
   --color-icon-info-tertiary: light-dark(var(--color-blue-500), var(--color-blue-500));
@@ -255,19 +255,19 @@
   --color-icon-on-danger-secondary: light-dark(var(--color-red-800), var(--color-red-300));
   --color-icon-on-danger-tertiary: light-dark(var(--color-red-700), var(--color-red-300));
   --color-border-base: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-400), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-400), transparent),
     color-mix(in oklab, #fff var(--alpha-400), transparent)
   );
   --color-border-base-secondary: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-300), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-300), transparent),
     color-mix(in oklab, #fff var(--alpha-300), transparent)
   );
   --color-border-base-tertiary: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-200), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-200), transparent),
     color-mix(in oklab, #fff var(--alpha-200), transparent)
   );
   --color-border-disabled: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-300), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-300), transparent),
     color-mix(in oklab, #fff var(--alpha-300), transparent)
   );
   --color-border-brand: light-dark(
@@ -280,15 +280,15 @@
     color-mix(in oklab, var(--color-emerald-400) var(--alpha-500), transparent)
   );
   --color-border-neutral: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-1000), transparent),
-    var(--color-stone-400)
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-1000), transparent),
+    var(--color-neutral-400)
   );
   --color-border-neutral-secondary: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-300), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-300), transparent),
     color-mix(in oklab, #fff var(--alpha-400), transparent)
   );
   --color-border-neutral-tertiary: light-dark(
-    color-mix(in oklab, var(--color-stone-600) var(--alpha-500), transparent),
+    color-mix(in oklab, var(--color-neutral-600) var(--alpha-500), transparent),
     color-mix(in oklab, #fff var(--alpha-300), transparent)
   );
   --color-border-info: light-dark(

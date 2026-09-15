@@ -30,7 +30,7 @@
 
     p {
       font-size: var(--text-sm);
-      color: var(--color-text-base-secondary);
+      color: var(--color-text-neutral-secondary);
       font-variant-numeric: tabular-nums;
     }
 
@@ -39,7 +39,7 @@
       font-size: var(--text-4xl);
       font-weight: var(--font-weight-medium);
       letter-spacing: var(--tracking-tight);
-      color: var(--color-text-base);
+      color: var(--color-text-neutral);
     }
 
     a {
@@ -51,7 +51,7 @@
       font-size: var(--text-sm);
       line-height: var(--text-sm--line-height);
       font-weight: var(--font-weight-medium);
-      color: var(--color-text-base);
+      color: var(--color-text-neutral);
       background-color: var(--color-bg-base);
       border: var(--stroke-border) solid var(--color-border-base-secondary);
       border-radius: calc(infinity * 1px);

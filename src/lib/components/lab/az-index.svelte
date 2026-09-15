@@ -42,7 +42,7 @@
       font-family: var(--font-serif);
       font-size: var(--text-lg);
       line-height: 1;
-      color: var(--color-text-base);
+      color: var(--color-text-neutral);
     }
 
     li {

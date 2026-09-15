@@ -97,7 +97,7 @@
 .shiki::selection,
 .shiki ::selection {
   background-color: light-dark(
-    color-mix(in oklab, var(--color-stone-950) var(--alpha-400), transparent),
+    color-mix(in oklab, var(--color-neutral-950) var(--alpha-400), transparent),
     color-mix(in oklab, #fff var(--alpha-500), transparent)
   );
 }
