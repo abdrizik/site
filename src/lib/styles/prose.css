@@ -2,7 +2,7 @@
   --prose-flow: calc(var(--spacing) * 4);
   --prose-muted: var(--color-text-neutral-secondary);
   --prose-rule: var(--color-border-base-secondary);
-  --prose-foreground: var(--color-text-base);
+  --prose-foreground: var(--color-text-neutral);
 
   isolation: isolate;
   margin-trim: block-start;
@@ -232,7 +232,7 @@
     }
 
     &:where(:is(ul, ol) > li)::marker {
-      color: var(--color-text-base-tertiary);
+      color: var(--color-text-neutral-tertiary);
     }
 
     &:where(.table-scroll) {

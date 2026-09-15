@@ -31,7 +31,7 @@
       font-size: var(--text-2xl);
       line-height: var(--leading-tight);
       font-weight: var(--font-weight-medium);
-      color: var(--color-text-base);
+      color: var(--color-text-neutral);
       text-wrap: balance;
     }
 
@@ -42,7 +42,7 @@
       color: var(--color-text-neutral-secondary);
 
       dd {
-        color: var(--color-text-base);
+        color: var(--color-text-neutral);
         font-weight: var(--font-weight-medium);
       }
     }

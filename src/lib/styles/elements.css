@@ -28,7 +28,7 @@
 }
 
 [data-inline-link] {
-  color: var(--color-text-base);
+  color: var(--color-text-neutral);
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-color: color-mix(in oklab, currentColor 40%, transparent);
@@ -57,7 +57,7 @@
 
   &::before {
     content: '~/';
-    color: var(--color-text-base-tertiary);
+    color: var(--color-text-neutral-tertiary);
   }
 }
 
@@ -137,14 +137,14 @@
   align-items: center;
   justify-content: center;
   padding: calc(var(--spacing) * 2);
-  color: var(--color-icon-base-secondary);
+  color: var(--color-icon-neutral-secondary);
   transition:
     color 150ms var(--ease-out),
     scale 150ms var(--ease-out);
 
   @media (hover: hover) {
     &:hover {
-      color: var(--color-icon-secondary-hover);
+      color: var(--color-icon-neutral);
     }
   }
 
@@ -164,13 +164,13 @@
   gap: calc(var(--spacing) * 6);
 
   :where([data-row-label]) {
-    color: var(--color-text-base);
+    color: var(--color-text-neutral);
   }
 
   :where([data-row-meta]) {
     flex-shrink: 0;
     font-size: var(--text-sm);
     font-variant-numeric: tabular-nums;
-    color: var(--color-text-base-secondary);
+    color: var(--color-text-neutral-secondary);
   }
 }

@@ -92,7 +92,7 @@
     inset-inline-start: calc(var(--spacing) * 2);
     z-index: 10;
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
-    color: var(--color-text-base);
+    color: var(--color-text-neutral);
     background-color: var(--color-bg-base);
     border: var(--stroke-border) solid var(--color-border-base-tertiary);
     border-radius: var(--radius-md);

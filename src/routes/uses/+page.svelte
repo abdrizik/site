@@ -40,7 +40,7 @@
       h4 {
         font-size: var(--text-base);
         font-weight: var(--font-weight-normal);
-        color: var(--color-text-base);
+        color: var(--color-text-neutral);
       }
 
       p {

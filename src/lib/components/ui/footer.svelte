@@ -57,7 +57,7 @@
     padding-block-start: calc(var(--spacing) * 6);
     font-size: var(--text-sm);
     font-variant-numeric: tabular-nums;
-    color: var(--color-text-base-secondary);
+    color: var(--color-text-neutral-secondary);
 
     > div:first-child {
       display: flex;
@@ -98,7 +98,7 @@
     }
 
     b {
-      color: var(--color-text-neutral-secondary);
+      color: var(--color-text-neutral);
       font-weight: var(--font-weight-semibold);
     }
 
@@ -108,7 +108,6 @@
 
     b svg {
       display: inline-block;
-      color: var(--color-text-base-tertiary);
       inline-size: 1em;
       block-size: 1em;
       margin-inline-end: 0.2em;

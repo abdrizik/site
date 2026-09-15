@@ -43,13 +43,13 @@
     pre {
       font-size: var(--text-sm);
       line-height: var(--text-sm--line-height);
-      color: var(--color-text-base);
+      color: var(--color-text-neutral);
       outline: 0;
       display: flex;
       overflow-x: auto;
       overscroll-behavior-x: contain;
       scrollbar-width: thin;
-      scrollbar-color: var(--color-icon-base-tertiary) transparent;
+      scrollbar-color: var(--color-icon-neutral-tertiary) transparent;
       padding-block: calc(var(--spacing) * 3);
     }
 

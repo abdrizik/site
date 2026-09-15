@@ -3,8 +3,8 @@
 
   <div>
     <p>
-      <b>Design Engineer</b> <em>building things for the web</em>, where design meets code: design
-      systems, motion, and the small details that make an interface feel natural.
+      Design Engineer <em>building things for the web</em>, where design meets code: design systems,
+      motion, and the small details that make an interface feel natural.
     </p>
 
     <p>
@@ -31,7 +31,7 @@
   h1 {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-base);
+    color: var(--color-text-neutral);
   }
 
   h1 + div {
@@ -39,12 +39,14 @@
     flex-direction: column;
     gap: calc(var(--spacing) * 5);
     margin-block-start: calc(var(--spacing) * 8);
+    color: var(--color-text-neutral-secondary);
 
     em {
       font-family: var(--font-serif);
     }
 
     b {
+      color: var(--color-text-neutral);
       font-weight: var(--font-weight-semibold);
     }
   }

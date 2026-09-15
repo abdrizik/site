@@ -78,11 +78,11 @@
     h3 {
       font-size: var(--text-lg);
       font-weight: var(--font-weight-medium);
-      color: var(--color-text-base);
+      color: var(--color-text-neutral);
 
       a {
         display: inline-flex;
-        color: var(--color-icon-base);
+        color: var(--color-icon-neutral);
         transform-origin: left center;
         transition: scale 150ms var(--ease-out);
 
@@ -116,7 +116,7 @@
       code {
         font-family: var(--font-mono);
         font-size: 0.9em;
-        color: var(--color-text-base);
+        color: var(--color-text-neutral);
       }
     }
   }
