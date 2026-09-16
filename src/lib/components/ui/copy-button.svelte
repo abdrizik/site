@@ -37,7 +37,7 @@
     font-family: var(--font-sans);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-neutral-secondary);
+    color: var(--color-text-base-secondary);
     user-select: none;
     border-radius: var(--radius-md);
 
@@ -57,7 +57,7 @@
         scale 150ms var(--ease-out);
 
       &:hover {
-        color: var(--color-text-neutral);
+        color: var(--color-text-base);
       }
     }
   }

@@ -40,14 +40,14 @@
       h4 {
         font-size: var(--text-base);
         font-weight: var(--font-weight-normal);
-        color: var(--color-text-neutral);
+        color: var(--color-text-base);
       }
 
       p {
         margin-block-start: calc(var(--spacing) * 3);
         max-inline-size: var(--page-measure);
         font-size: var(--text-sm);
-        color: var(--color-text-neutral-secondary);
+        color: var(--color-text-base-secondary);
       }
     }
   }

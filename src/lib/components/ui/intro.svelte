@@ -31,7 +31,7 @@
   h1 {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-neutral);
+    color: var(--color-text-base);
   }
 
   h1 + div {
@@ -39,14 +39,14 @@
     flex-direction: column;
     gap: calc(var(--spacing) * 5);
     margin-block-start: calc(var(--spacing) * 8);
-    color: var(--color-text-neutral-secondary);
+    color: var(--color-text-base-secondary);
 
     em {
       font-family: var(--font-serif);
     }
 
     b {
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
       font-weight: var(--font-weight-semibold);
     }
   }

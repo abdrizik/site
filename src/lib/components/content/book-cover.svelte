@@ -34,7 +34,7 @@
       margin-block-start: calc(var(--spacing) * 3);
       font-size: var(--text-sm);
       text-align: center;
-      color: var(--color-text-neutral-secondary);
+      color: var(--color-text-base-secondary);
     }
 
     @media (width >= 40rem) {

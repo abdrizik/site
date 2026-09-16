@@ -76,7 +76,7 @@
     background-color: var(--color-bg-base-secondary);
     font-size: var(--text-base);
     line-height: var(--leading-relaxed);
-    color: var(--color-text-neutral);
+    color: var(--color-text-base);
     text-wrap: pretty;
   }
 

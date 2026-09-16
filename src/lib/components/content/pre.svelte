@@ -43,7 +43,7 @@
     pre {
       font-size: var(--text-sm);
       line-height: var(--text-sm--line-height);
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
       outline: 0;
       display: flex;
       overflow-x: auto;
