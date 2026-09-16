@@ -47,7 +47,7 @@
 
     b {
       color: var(--color-text-base);
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-medium);
     }
   }
 </style>
