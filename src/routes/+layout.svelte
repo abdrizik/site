@@ -69,7 +69,7 @@
 <div class="shell">
   <Nav />
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     {#key page.url.pathname}
       <div
         in:blur={{ duration: 600, delay: 200, amount: 4 }}
@@ -87,7 +87,7 @@
 
 <style>
   .skip {
-    position: absolute;
+    position: fixed;
     inset-block-start: calc(var(--spacing) * 2);
     inset-inline-start: calc(var(--spacing) * 2);
     z-index: 10;
