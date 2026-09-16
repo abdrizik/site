@@ -42,6 +42,10 @@
       margin-block-end: calc(var(--spacing) * 4);
       padding-block: calc(var(--spacing) * 1.5);
       font-weight: var(--font-weight-normal);
+
+      [data-row-label] {
+        color: var(--color-text-base-secondary);
+      }
     }
 
     ul {
