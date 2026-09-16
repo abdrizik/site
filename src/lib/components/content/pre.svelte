@@ -26,7 +26,7 @@
 <style>
   div {
     position: relative;
-    margin-block: var(--prose-flow);
+    margin-block: calc(var(--spacing) * 4);
     overflow: hidden;
     background-color: var(--color-bg-base-secondary);
     border-radius: var(--radius-md);

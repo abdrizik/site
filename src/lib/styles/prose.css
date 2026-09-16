@@ -1,53 +1,48 @@
 .prose {
-  --prose-flow: calc(var(--spacing) * 4);
-  --prose-muted: var(--color-text-base-secondary);
-  --prose-rule: var(--color-border-base-secondary);
-  --prose-foreground: var(--color-text-base);
-
   isolation: isolate;
   margin-trim: block-start;
 
   *:not(:where(.not-prose, .not-prose *)) {
     &:where(p) {
-      margin-block-start: var(--prose-flow);
+      margin-block-start: calc(var(--spacing) * 4);
     }
 
     &:where(h1, h2, h3, h4, h5, h6) {
       position: relative;
-      color: var(--prose-foreground);
+      color: var(--color-text-base);
       font-weight: var(--font-weight-medium);
       text-wrap: balance;
     }
 
     &:where(h1) {
-      margin-block-start: var(--prose-flow);
+      margin-block-start: calc(var(--spacing) * 4);
       font-size: var(--text-2xl);
       line-height: var(--leading-tight);
     }
 
     &:where(h2) {
-      margin-block-start: calc(var(--prose-flow) * 3);
+      margin-block-start: calc(var(--spacing) * 12);
       font-size: var(--text-xl);
       line-height: var(--leading-tight);
     }
 
     &:where(h3) {
-      margin-block-start: calc(var(--prose-flow) * 2);
+      margin-block-start: calc(var(--spacing) * 8);
       font-size: var(--text-lg);
       line-height: var(--leading-snug);
     }
 
     &:where(h4, h5, h6) {
-      margin-block-start: calc(var(--prose-flow) * 2);
+      margin-block-start: calc(var(--spacing) * 8);
       font-size: var(--text-base);
     }
 
     &:where(h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + *) {
-      margin-block-start: var(--prose-flow);
+      margin-block-start: calc(var(--spacing) * 4);
     }
 
     &:where(a) {
-      color: var(--prose-foreground);
+      color: var(--color-text-base);
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-decoration-color: color-mix(in oklab, currentColor 40%, transparent);
@@ -83,7 +78,7 @@
     }
 
     &:where(strong) {
-      color: var(--prose-foreground);
+      color: var(--color-text-base);
       font-weight: var(--font-weight-medium);
     }
 
@@ -103,7 +98,7 @@
       font-family: inherit;
       font-size: 0.85em;
       font-weight: var(--font-weight-medium);
-      border: var(--stroke-border) solid var(--prose-rule);
+      border: var(--stroke-border) solid var(--color-border-base-secondary);
       border-block-end-width: var(--stroke-border-thick);
       border-radius: var(--radius-sm);
       padding: 0.0625em 0.35em;
@@ -120,7 +115,7 @@
 
     &:where(a code) {
       background-color: color-mix(in oklab, currentColor 8%, transparent);
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
     }
 
     &:where(:is(p, li) code) {
@@ -141,7 +136,7 @@
       border-radius: var(--radius-md);
       border-start-end-radius: 0;
       background-color: var(--quote-surface);
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
     }
 
     &:where(blockquote)::before,
@@ -176,12 +171,12 @@
     }
 
     &:where(hr) {
-      margin-block-start: calc(var(--prose-flow) * 3);
-      border-block-start: var(--stroke-border) solid var(--prose-rule);
+      margin-block-start: calc(var(--spacing) * 12);
+      border-block-start: var(--stroke-border) solid var(--color-border-base-secondary);
     }
 
     &:where(hr + :is(h1, h2, h3, h4)) {
-      margin-block-start: var(--prose-flow);
+      margin-block-start: calc(var(--spacing) * 4);
     }
 
     &:where(img) {
@@ -194,7 +189,7 @@
     &:where(figcaption) {
       margin-block-start: calc(var(--spacing) * 2);
       font-size: var(--text-sm);
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
     }
 
     &:where(ul) {
@@ -214,7 +209,7 @@
     }
 
     &:where(ul, ol) {
-      margin-block-start: var(--prose-flow);
+      margin-block-start: calc(var(--spacing) * 4);
       padding-inline-start: calc(var(--spacing) * 4.5);
     }
 
@@ -248,7 +243,7 @@
       font-size: var(--text-sm);
       line-height: var(--leading-normal);
       font-variant-numeric: tabular-nums;
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
     }
 
     &:where(th, td) {
@@ -259,12 +254,12 @@
     }
 
     &:where(th) {
-      color: var(--prose-foreground);
+      color: var(--color-text-base);
       font-weight: var(--font-weight-medium);
     }
 
     &:where(tr:not(:last-child)) {
-      border-block-end: var(--stroke-border) solid var(--prose-rule);
+      border-block-end: var(--stroke-border) solid var(--color-border-base-secondary);
     }
 
     &:where(:is(th, td):first-child) {
@@ -276,11 +271,11 @@
     }
 
     &:where(.footnotes) {
-      margin-block-start: calc(var(--prose-flow) * 3);
+      margin-block-start: calc(var(--spacing) * 12);
       padding-block-start: calc(var(--spacing) * 6);
-      border-block-start: var(--stroke-border) solid var(--prose-rule);
+      border-block-start: var(--stroke-border) solid var(--color-border-base-secondary);
       font-size: var(--text-sm);
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
     }
 
     &:where(.footnote-ref) {
@@ -289,7 +284,7 @@
     }
 
     &:where(.footnote-ref a, .footnote-backref) {
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
       text-decoration: none;
     }
 

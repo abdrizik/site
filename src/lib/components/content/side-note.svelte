@@ -32,7 +32,7 @@
       margin-block-start: calc(var(--spacing) * 3);
       font-family: var(--font-serif);
       font-size: var(--text-sm);
-      color: var(--prose-muted);
+      color: var(--color-text-base-secondary);
     }
 
     @media (width >= 64rem) {
