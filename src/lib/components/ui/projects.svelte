@@ -78,7 +78,7 @@
     h3 {
       font-size: var(--text-lg);
       font-weight: var(--font-weight-medium);
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
 
       a {
         display: inline-flex;
@@ -111,12 +111,12 @@
     p {
       margin-block-start: calc(var(--spacing) * 3);
       max-inline-size: var(--page-measure);
-      color: var(--color-text-neutral-secondary);
+      color: var(--color-text-base-secondary);
 
       code {
         font-family: var(--font-mono);
         font-size: 0.9em;
-        color: var(--color-text-neutral);
+        color: var(--color-text-base);
       }
     }
   }

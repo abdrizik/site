@@ -1,8 +1,8 @@
 .prose {
   --prose-flow: calc(var(--spacing) * 4);
-  --prose-muted: var(--color-text-neutral-secondary);
+  --prose-muted: var(--color-text-base-secondary);
   --prose-rule: var(--color-border-base-secondary);
-  --prose-foreground: var(--color-text-neutral);
+  --prose-foreground: var(--color-text-base);
 
   isolation: isolate;
   margin-trim: block-start;
@@ -65,7 +65,7 @@
       position: absolute;
       inset-inline-end: 100%;
       padding-inline-end: calc(var(--spacing) * 3.5);
-      color: var(--color-text-neutral-tertiary);
+      color: var(--color-text-base-tertiary);
       font-family: var(--font-serif);
       opacity: 0;
       transition:
@@ -79,7 +79,7 @@
     }
 
     &:where(.anchor:hover) {
-      color: var(--color-text-neutral-secondary);
+      color: var(--color-text-base-secondary);
     }
 
     &:where(strong) {
@@ -114,7 +114,7 @@
       font-size: var(--text-sm);
       border-radius: var(--radius-md);
       background-color: var(--color-bg-base-tertiary);
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
       padding: calc(var(--spacing) * 0.8) calc(var(--spacing) * 1.2);
     }
 
@@ -232,7 +232,7 @@
     }
 
     &:where(:is(ul, ol) > li)::marker {
-      color: var(--color-text-neutral-tertiary);
+      color: var(--color-text-base-tertiary);
     }
 
     &:where(.table-scroll) {

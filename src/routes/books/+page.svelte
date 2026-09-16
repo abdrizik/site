@@ -61,7 +61,7 @@
         display: block;
         margin-block-start: calc(var(--spacing) * 2);
         font-size: var(--text-sm);
-        color: var(--color-text-neutral);
+        color: var(--color-text-base);
       }
     }
   }

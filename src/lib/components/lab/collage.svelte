@@ -32,7 +32,7 @@
       padding: calc(var(--spacing) * 4);
       font-family: var(--font-serif);
       line-height: 1.3;
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
       text-wrap: balance;
       background-color: var(--color-bg-base);
     }

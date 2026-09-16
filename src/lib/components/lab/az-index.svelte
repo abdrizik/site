@@ -42,13 +42,13 @@
       font-family: var(--font-serif);
       font-size: var(--text-lg);
       line-height: 1;
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
     }
 
     li {
       font-size: var(--text-xs);
       line-height: 1.5;
-      color: var(--color-text-neutral-secondary);
+      color: var(--color-text-base-secondary);
     }
 
     @media (width >= 48rem) {

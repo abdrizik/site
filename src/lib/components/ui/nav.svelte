@@ -90,17 +90,17 @@
   }
 
   a {
-    color: var(--color-text-neutral-secondary);
+    color: var(--color-text-base-secondary);
     transition: color 150ms ease;
 
     @media (hover: hover) {
       &:hover {
-        color: var(--color-text-neutral);
+        color: var(--color-text-base);
       }
     }
 
     &[aria-current='page'] {
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
     }
 
     &:focus-visible {
@@ -121,7 +121,7 @@
       display: block;
       inline-size: 100%;
       block-size: 100%;
-      background-color: var(--color-text-neutral);
+      background-color: var(--color-text-base);
       border-radius: calc(infinity * 1px);
     }
 

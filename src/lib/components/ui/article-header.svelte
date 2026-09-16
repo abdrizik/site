@@ -31,7 +31,7 @@
       font-size: var(--text-2xl);
       line-height: var(--leading-tight);
       font-weight: var(--font-weight-medium);
-      color: var(--color-text-neutral);
+      color: var(--color-text-base);
       text-wrap: balance;
     }
 
@@ -39,10 +39,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: calc(var(--spacing) * 1);
-      color: var(--color-text-neutral-secondary);
+      color: var(--color-text-base-secondary);
 
       dd {
-        color: var(--color-text-neutral);
+        color: var(--color-text-base);
         font-weight: var(--font-weight-medium);
       }
     }
